@@ -6,8 +6,8 @@ import TradingChart from "./TradingChart";
 import { useInView } from "../hooks/useInView";
 
 const TradingSection = () => {
-  const [leftRef, leftInView] = useInView({ threshold: 0.3, triggerOnce: true });
-  const [rightRef, rightInView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [leftRef, leftInView] = useInView<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+  const [rightRef, rightInView] = useInView<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
 
   return (
     <section id="trading" className="py-12 md:py-20 bg-trading-dark/30 relative overflow-hidden">

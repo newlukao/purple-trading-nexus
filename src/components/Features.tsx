@@ -1,11 +1,10 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, CircleArrowUp, DollarSign, Search } from "lucide-react";
 import { useInView } from "../hooks/useInView";
 
 const Features = () => {
-  const [titleRef, titleInView] = useInView({ threshold: 0.3, triggerOnce: true });
-  const [featuresRef, featuresInView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [titleRef, titleInView] = useInView<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+  const [featuresRef, featuresInView] = useInView<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
 
   const features = [
     {

@@ -7,10 +7,10 @@ interface UseInViewOptions {
   triggerOnce?: boolean;
 }
 
-export const useInView = (options: UseInViewOptions = {}) => {
+export const useInView = <T extends HTMLElement = HTMLElement>(options: UseInViewOptions = {}) => {
   const [isInView, setIsInView] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const element = ref.current;

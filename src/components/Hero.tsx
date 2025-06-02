@@ -5,8 +5,8 @@ import AnimatedCounter from "./AnimatedCounter";
 import { useInView } from "../hooks/useInView";
 
 const Hero = () => {
-  const [heroRef, heroInView] = useInView({ threshold: 0.2 });
-  const [statsRef, statsInView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [heroRef, heroInView] = useInView<HTMLDivElement>({ threshold: 0.2 });
+  const [statsRef, statsInView] = useInView<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">

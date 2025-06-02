@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Testimonials = () => {
-  const [titleRef, titleInView] = useInView({ threshold: 0.3, triggerOnce: true });
-  const [cardsRef, cardsInView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [titleRef, titleInView] = useInView<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+  const [cardsRef, cardsInView] = useInView<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
