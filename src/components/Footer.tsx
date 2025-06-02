@@ -80,8 +80,7 @@ const Footer = () => {
         
         <div className="mt-6 md:mt-8 p-3 md:p-4 bg-trading-warning/10 border border-trading-warning/30 rounded-lg">
           <p className="text-trading-warning text-xs md:text-sm leading-relaxed">
-            <strong>Aviso de Risco:</strong> O trading de opções binárias envolve risco significativo. 
-            Você pode perder todo o seu investimento. Opere apenas com capital que pode se permitir perder.
+            <strong>Aviso de Risco:</strong> O trading de opções binárias envolve risco significativo. Opere apenas com capital que pode se permitir perder.
           </p>
         </div>
       </div>
