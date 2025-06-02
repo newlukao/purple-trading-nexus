@@ -84,6 +84,10 @@
   body {
     @apply bg-trading-darker text-white font-sans;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
@@ -92,6 +96,7 @@
       linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
   }
   
   .glow-effect {
@@ -103,5 +108,106 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0F0F0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8B5CF6, #C084FC);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #A855F7, #C084FC);
+  }
+
+  /* Loading animation */
+  .loading-pulse {
+    animation: loading-pulse 1.5s ease-in-out infinite;
+  }
+
+  /* Text reveal animation */
+  .text-reveal {
+    animation: text-reveal 0.8s ease-out;
+  }
+
+  /* Stagger animation for children */
+  .stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: stagger-item 0.6s ease-out forwards;
+  }
+
+  .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+@keyframes loading-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes stagger-item {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive enhancements */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
