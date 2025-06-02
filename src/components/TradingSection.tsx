@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CircleArrowUp, CircleArrowDown, TrendingUp } from "lucide-react";
+import { CircleArrowUp, CircleArrowDown, TrendingUp, DollarSign } from "lucide-react";
 
 const TradingSection = () => {
   return (
