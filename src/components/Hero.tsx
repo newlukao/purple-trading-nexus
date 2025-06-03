@@ -53,7 +53,7 @@ const Hero = () => {
               variant="outline" 
               className="w-full sm:w-auto border-trading-primary text-trading-primary hover:bg-trading-primary hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              Acessar demonstração
+              Demonstração
             </Button>
           </div>
           
