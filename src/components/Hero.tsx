@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play } from "lucide-react";
 import AnimatedCounter from "./AnimatedCounter";
@@ -28,7 +29,7 @@ const Hero = () => {
         >
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 leading-tight text-purple-500">
-            Domine o Mercado de{" "}
+            Domine Totalmente o Mercado de{" "}
             <span className="gradient-text block sm:inline">Opções Binárias</span>
           </h1>
           
