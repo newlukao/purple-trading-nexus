@@ -65,7 +65,7 @@ const Header = () => {
         {/* Desktop CTA Buttons */}
         <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
           <Button variant="ghost" className="text-gray-300 hover:text-white transition-colors duration-300">
-            Login
+            Logar
           </Button>
           <Button className="bg-gradient-to-r from-trading-primary to-trading-secondary hover:from-trading-secondary hover:to-trading-accent text-white px-4 lg:px-6 py-2 rounded-lg glow-effect transition-all duration-300 transform hover:scale-105">
             Começar Agora
@@ -100,7 +100,7 @@ const Header = () => {
             
             <div className="flex flex-col space-y-4 mt-8">
               <Button variant="ghost" className="text-xl text-gray-300 hover:text-white">
-                Login
+                Logar
               </Button>
               <Button className="text-xl bg-gradient-to-r from-trading-primary to-trading-secondary hover:from-trading-secondary hover:to-trading-accent text-white px-8 py-3 rounded-lg glow-effect">
                 Começar Agora
